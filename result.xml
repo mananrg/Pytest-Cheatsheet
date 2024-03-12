@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="2" tests="15" time="0.030" timestamp="2024-03-11T22:18:25.757963" hostname="manans-MacBook-Pro.local"><testcase classname="1.test_basics.test_square" name="test_sqrt" time="0.000" /><testcase classname="1.test_basics.test_square" name="testsquare" time="0.000"><failure message="assert (7 * 7) == 40">@pytest.mark.square
+    def testsquare():
+        num = 7
+&gt;       assert 7 * 7 == 40
+E       assert (7 * 7) == 40
+
+1.test_basics/test_square.py:16: AssertionError</failure></testcase><testcase classname="2.multiple_file_execution.test_compare" name="test_greater" time="0.000"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="2.multiple_file_execution.test_compare" name="test_greater_equal" time="0.000" /><testcase classname="2.multiple_file_execution.test_compare" name="test_less" time="0.000"><skipped type="pytest.skip" message="Test skipped because num is not less than 100">/Users/manangandhi/Desktop/pytest_tutorial/2.multiple_file_execution/test_compare.py:19: Test skipped because num is not less than 100</skipped></testcase><testcase classname="4.Fixtures.test_div_by_3_6" name="test_divisible_by_3" time="0.000" /><testcase classname="4.Fixtures.test_div_by_3_6" name="test_divisible_by_6" time="0.000"><failure message="assert (39 % 6) == 0">input_value = 39
+
+    def test_divisible_by_6(input_value):
+&gt;      assert input_value % 6 == 0
+E      assert (39 % 6) == 0
+
+4.Fixtures/test_div_by_3_6.py:12: AssertionError</failure></testcase><testcase classname="5.Conftest.test_display" name="test_display_greeting" time="0.000" /><testcase classname="5.Conftest.test_display" name="test_display_age" time="0.000" /><testcase classname="6.Parameterize.test_addition" name="test_add[1-1-2]" time="0.000" /><testcase classname="6.Parameterize.test_addition" name="test_add[2-3-5]" time="0.000" /><testcase classname="6.Parameterize.test_addition" name="test_add[10--5-4]" time="0.000"><failure message="assert (10 + -5) == 4">x = 10, y = -5, result = 4
+
+    @pytest.mark.parametrize(("x", "y", "result"), [(1, 1, 2), (2, 3, 5), (10, -5, 4)])
+    def test_add(x, y, result):
+&gt;       assert x + y == result
+E       assert (10 + -5) == 4
+
+6.Parameterize/test_addition.py:6: AssertionError</failure></testcase><testcase classname="7.N_Test_Failures.test_failure_cases" name="test_divide_by_zero" time="0.000"><failure message="ZeroDivisionError: division by zero">def test_divide_by_zero():
+&gt;       assert 1 / 0 == 2
+E       ZeroDivisionError: division by zero
+
+7.N_Test_Failures/test_failure_cases.py:3: ZeroDivisionError</failure></testcase><testcase classname="7.N_Test_Failures.test_failure_cases" name="test_negative_number" time="0.000"><failure message="assert 5 == -5&#10; +  where 5 = abs(-5)">def test_negative_number():
+&gt;       assert abs(-5) == -5
+E       assert 5 == -5
+E        +  where 5 = abs(-5)
+
+7.N_Test_Failures/test_failure_cases.py:6: AssertionError</failure></testcase><testcase classname="7.N_Test_Failures.test_failure_cases" name="test_nonexistent_key" time="0.000"><failure message="KeyError: 'nonexistent_key'">def test_nonexistent_key():
+        my_dict = {"key1": "value1", "key2": "value2"}
+&gt;       assert my_dict["nonexistent_key"] == "value2"
+E       KeyError: 'nonexistent_key'
+
+7.N_Test_Failures/test_failure_cases.py:10: KeyError</failure></testcase></testsuite></testsuites>
